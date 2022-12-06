@@ -1,0 +1,31 @@
+[
+    {
+        "id": "1",
+        "emotion":"sad",
+        "inneremotion": [ "tired","burntout","empty","lonely"]
+        
+    },
+    {
+        "id": "2",
+        "emotion":"fear",
+        "inneremotion":["overthinking","anxious","worried","$$$"]
+    },
+    {
+        "id": "3",
+        "emotion":"anger",
+        "inneremotion":["stressed","restless","$$$$","$$$"]
+        
+    },
+    {
+        "id": "4",
+        "emotion":"dislike",
+        "inneremotion": ["disgust","lazy","failure","$$$$"]
+        
+    },
+    {
+        "id": "5",
+        "emotion":"enjoyment",
+        "inneremotion": ["peaceful","inspired","$$$$","$$$$"]
+        
+    }
+]
