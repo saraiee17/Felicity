@@ -10,3 +10,8 @@
     }
 }
 
+@mixin mobile {
+    @media (min-width: 500px) {
+        @content;
+    }
+}

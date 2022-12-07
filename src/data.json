@@ -2,30 +2,55 @@
     {
         "id": "1",
         "emotion":"sad",
-        "inneremotion": [ "tired","burntout","empty","lonely"]
+        "inneremotions": [ 
+            {"tired":"take a 15 minute power nap"},
+            {"burntout": "read a chapter of a good book"},
+            {"empty":"take a social media break"},
+            {"lonely":"do somethng small that makes you happy"}
+        ]
         
     },
     {
         "id": "2",
         "emotion":"fear",
-        "inneremotion":["overthinking","anxious","worried","$$$"]
+        "inneremotions":[
+            {"overthinking":"write down your worries"},
+            {"anxious": "go for a walk"},
+            {"worried": "missing"},
+            {"confused": "missing"}
+        ]
     },
     {
         "id": "3",
         "emotion":"anger",
-        "inneremotion":["stressed","restless","$$$$","$$$"]
+        "inneremotions":[
+            {"stressed":"take 3 deep breaths and empty your mind/meditate"},
+            {"restless":"smell lavendar"},
+            {"missing":"missing"},
+            {"missing":"missing"}
+        ]
         
     },
     {
         "id": "4",
         "emotion":"dislike",
-        "inneremotion": ["disgust","lazy","failure","$$$$"]
+        "inneremotions": [
+            {"disgust":"missing"},
+            {"lazy":"reduce screentime"},
+            {"failure":"do something nice for someone else"},
+            {"missing":"missing"}
+        ]
         
     },
     {
         "id": "5",
         "emotion":"enjoyment",
-        "inneremotion": ["peaceful","inspired","$$$$","$$$$"]
+        "inneremotions": [
+            {"peaceful": "scribe"},
+            {"inspired": "scribed"},
+            {"missing":"missing"},
+            {"missing":"missing"}
+        ]
         
     }
 ]

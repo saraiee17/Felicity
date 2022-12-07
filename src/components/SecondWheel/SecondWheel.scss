@@ -1,5 +1,62 @@
- {/* {object.map((emotion)=>{
-                return <div key={emotion.id}>  
-                <p >{emotion.inneremotion}</p>
-                </div>
-             })} */}
+.secondwheel{
+    background-color: #c68cff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    &__title{
+        margin-right: 7rem;
+    }
+    &__container{
+        background-image: url(../../assets/background.png);
+        height: 500px;
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #734e3c;
+        border-radius: 50%;
+        border: 15px solid #734e3c;
+    }
+    &__text{
+        &0{
+        color: #c68cff;
+        background-color: white;
+        width:300px;
+        height: 200px;
+        clip-path: polygon(100% 0,50% 100%, 0 0);
+        transform: translate(50%)rotate(-90deg);
+        text-align: center;
+        }
+        &1{
+            color: #c68cff;
+            background-color: white;
+            width:300px;
+            height: 200px;
+            clip-path: polygon(100% 0,50% 100%, 0 0);
+            transform: translate(50%,-60%);
+            text-align: center;
+        }
+        &2{
+            color: #c68cff;
+            background-color: white;
+            width:300px;
+            height: 200px;
+            clip-path: polygon(100% 0,50% 100%, 0 0);
+            transform: translate(50%) rotate(90deg);
+            text-align: center;
+        }
+        &3{
+            color: #c68cff;
+            background-color: white;
+            width:300px;
+            height: 200px;
+            clip-path: polygon(100% 0,50% 100%, 0 0);
+            transform: translate(-150%,60%)rotate(180deg);
+            text-align: center;
+            }
+    }
+
+}

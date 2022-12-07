@@ -1,19 +1,22 @@
 import './wheel.scss';
-import {Link} from 'react-router-dom';
-import {useState, useEffect} from 'react';
-import emotions from '../../data.json';
+import { Link} from "react-router-dom";
+import shovel from '../../assets/shovel.png'
 
-function wheel({object}){
-console.log(object);
+function wheel({emotions}){
+
+    // const edited=`wheel__emotion--text${0}`+=1;
 
     return(
         <div className='wheel'>
-            <h2>wheel</h2>
+            <div className='wheel__flex'>
+            <img className='return'src={shovel} alt='return arrow/shuvel'/>
+            <h2 className='wheel__title'>How are you feeling?</h2>
+            </div>
+            <div className='wheel__container'>
             {emotions.map((emotion)=>{
-                return <Link to={`/wheel`} className='emotion' key={emotion.id}>  
-                <p className='emotion__text'>{emotion.emotion}</p>
-                </Link>
+                return <Link to= {`/wheel/${emotion.id}`} key={emotion.id} className={`wheel__emotion--text${emotion.id}`}>{emotion.emotion}</Link>
              })}
+             </div>
         </div>
     )
 }
