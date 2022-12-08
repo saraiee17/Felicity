@@ -1,0 +1,76 @@
+@use '../../styles/mixins';
+@use '../../styles/colors';
+@use '../../styles/fonts';
+
+.secondwheel{
+    background-color: #AB93C9;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    &__title{
+        margin-right: 7rem;
+    }
+    &__cog{
+        max-width: 60px;
+        position: absolute;
+        top: 19rem;
+        z-index: 100;
+    }
+    &__container{
+        background-image: url(../../assets/background.png);
+        height: 500px;
+        width: 500px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #734e3c;
+        border-radius: 50%;
+        border: none;
+    }
+    &__container:active{
+        animation: spin 4s;
+        animation-timing-function: linear;
+    }
+    &__text{
+        &0{
+        color: #c68cff;
+        background-color: white;
+        width:300px;
+        height: 200px;
+        clip-path: polygon(100% 0,50% 100%, 0 0);
+        transform: translate(50%)rotate(-90deg);
+        text-align: center;
+        }
+        &1{
+            color: #c68cff;
+            background-color: white;
+            width:300px;
+            height: 200px;
+            clip-path: polygon(100% 0,50% 100%, 0 0);
+            transform: translate(50%,-60%);
+            text-align: center;
+        }
+        &2{
+            color: #c68cff;
+            background-color: white;
+            width:300px;
+            height: 200px;
+            clip-path: polygon(100% 0,50% 100%, 0 0);
+            transform: translate(50%) rotate(90deg);
+            text-align: center;
+        }
+        &3{
+            color: #c68cff;
+            background-color: white;
+            width:300px;
+            height: 200px;
+            clip-path: polygon(100% 0,50% 100%, 0 0);
+            transform: translate(-150%,60%)rotate(180deg);
+            text-align: center;
+            }
+    }
+
+}

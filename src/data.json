@@ -1,0 +1,56 @@
+[
+    {
+        "id": "1",
+        "emotion":"sad",
+        "inneremotions": [ 
+            {"tired":"take a 15 minute power nap"},
+            {"burntout": "read a chapter of a good book"},
+            {"empty":"take a social media break"},
+            {"lonely":"do somethng small that makes you happy"}
+        ]
+        
+    },
+    {
+        "id": "2",
+        "emotion":"fear",
+        "inneremotions":[
+            {"overthinking":"write down your worries"},
+            {"anxious": "go for a walk"},
+            {"worried": "missing"},
+            {"confused": "missing"}
+        ]
+    },
+    {
+        "id": "3",
+        "emotion":"anger",
+        "inneremotions":[
+            {"stressed":"take 3 deep breaths and empty your mind/meditate"},
+            {"restless":"smell lavendar"},
+            {"offended":"missing"},
+            {"bored":"missing"}
+        ]
+        
+    },
+    {
+        "id": "4",
+        "emotion":"dislike",
+        "inneremotions": [
+            {"disgust":"missing"},
+            {"lazy":"reduce screentime"},
+            {"failure":"do something nice for someone else"},
+            {"jealous":"missing"}
+        ]
+        
+    },
+    {
+        "id": "5",
+        "emotion":"enjoyment",
+        "inneremotions": [
+            {"peaceful": "Congrats!! Ponder why and enjoy the flowers."},
+            {"curious": "Congrats!! Ponder why and enjoy the flowers."},
+            {"appreciated":"Congrats!! Ponder why and enjoy the flowers."},
+            {"excited":"Congrats!! Ponder why and enjoy the flowers."}
+        ]
+        
+    }
+]
