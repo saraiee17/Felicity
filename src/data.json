@@ -26,8 +26,8 @@
         "inneremotions":[
             {"stressed":"take 3 deep breaths and empty your mind/meditate"},
             {"restless":"smell lavendar"},
-            {"missing":"missing"},
-            {"missing":"missing"}
+            {"offended":"missing"},
+            {"bored":"missing"}
         ]
         
     },
@@ -38,7 +38,7 @@
             {"disgust":"missing"},
             {"lazy":"reduce screentime"},
             {"failure":"do something nice for someone else"},
-            {"missing":"missing"}
+            {"jealous":"missing"}
         ]
         
     },
@@ -46,10 +46,10 @@
         "id": "5",
         "emotion":"enjoyment",
         "inneremotions": [
-            {"peaceful": "scribe"},
-            {"inspired": "scribed"},
-            {"missing":"missing"},
-            {"missing":"missing"}
+            {"peaceful": "Congrats!! Ponder why and enjoy the flowers."},
+            {"curious": "Congrats!! Ponder why and enjoy the flowers."},
+            {"appreciated":"Congrats!! Ponder why and enjoy the flowers."},
+            {"excited":"Congrats!! Ponder why and enjoy the flowers."}
         ]
         
     }

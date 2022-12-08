@@ -1,5 +1,9 @@
+@use '../../styles/mixins';
+@use '../../styles/colors';
+@use '../../styles/fonts';
+
 .wheel{
-    background-color:#c68cff ;
+    background-color:#AB93C9 ;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -15,7 +19,11 @@
     align-items: center;
     background-color:  #734e3c;
     border-radius: 50%;
-    border: 15px solid #734e3c;
+    border: none;
+    }
+    &__container:active{
+        animation: spin 4s;
+        animation-timing-function: linear;
     }
 &__flex{
     display: flex;
@@ -23,6 +31,12 @@
 }
 &__title{
     margin-right: 12rem;
+}
+&__cog{
+    max-width: 60px;
+    position: absolute;
+    top: 19rem;
+    z-index: 100;
 }
  &__emotion{
     &--text{

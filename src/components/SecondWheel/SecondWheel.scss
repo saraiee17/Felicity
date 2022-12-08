@@ -1,5 +1,9 @@
+@use '../../styles/mixins';
+@use '../../styles/colors';
+@use '../../styles/fonts';
+
 .secondwheel{
-    background-color: #c68cff;
+    background-color: #AB93C9;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -8,6 +12,12 @@
     overflow: hidden;
     &__title{
         margin-right: 7rem;
+    }
+    &__cog{
+        max-width: 60px;
+        position: absolute;
+        top: 19rem;
+        z-index: 100;
     }
     &__container{
         background-image: url(../../assets/background.png);
@@ -18,7 +28,11 @@
         align-items: center;
         background-color: #734e3c;
         border-radius: 50%;
-        border: 15px solid #734e3c;
+        border: none;
+    }
+    &__container:active{
+        animation: spin 4s;
+        animation-timing-function: linear;
     }
     &__text{
         &0{
