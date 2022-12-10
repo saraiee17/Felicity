@@ -3,7 +3,7 @@
 @use '../../styles/fonts';
 
 .secondwheel{
-    background-color: #AB93C9;
+    background-color: #801336 ;
     height: 100vh;
     display: flex;
     flex-direction: column;
@@ -20,7 +20,7 @@
         z-index: 100;
     }
     &__container{
-        background-image: url(../../assets/background.png);
+        background-image: url('../../assets/background.png');
         height: 500px;
         width: 500px;
         display: flex;
