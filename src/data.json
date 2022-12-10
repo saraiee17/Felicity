@@ -14,10 +14,10 @@
         "id": "2",
         "emotion":"fear",
         "inneremotions":[
-            {"overthinking":"write down your worries"},
+            {"overthinking":"write down your thoughts"},
             {"anxious": "go for a walk"},
-            {"worried": "missing"},
-            {"confused": "missing"}
+            {"worried": "read a chapter of a good book"},
+            {"confused": "talk to a friend"}
         ]
     },
     {
@@ -26,8 +26,8 @@
         "inneremotions":[
             {"stressed":"take 3 deep breaths and empty your mind/meditate"},
             {"restless":"smell lavendar"},
-            {"offended":"missing"},
-            {"bored":"missing"}
+            {"offended":"write down your thoughts"},
+            {"bored":"read a chapter of a good book"}
         ]
         
     },
@@ -35,10 +35,10 @@
         "id": "4",
         "emotion":"dislike",
         "inneremotions": [
-            {"disgust":"missing"},
+            {"disgust":"Practice deep breathing"},
             {"lazy":"reduce screentime"},
             {"failure":"do something nice for someone else"},
-            {"jealous":"missing"}
+            {"jealous":"Take 10 minutes to do something calming"}
         ]
         
     },
