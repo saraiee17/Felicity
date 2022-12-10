@@ -9,3 +9,12 @@
 .book{
     max-height: 100px;
 }
+
+.outside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__video{
+        border-radius: 0.5rem;
+    }
+}

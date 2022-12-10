@@ -3,6 +3,8 @@ import {useParams,Link} from 'react-router-dom';
 import harrypotter from '../../assets/harrypotter.png';
 import kurt from '../../assets/kurt.png';
 import rings from '../../assets/rings.png';
+import outside from '../../assets/gooutside.mp4';
+import rain from '../../assets/rain.mp4';
 
 function Suggestions({data}){
 const params= useParams();
@@ -18,8 +20,22 @@ console.log(suggestion)
             <Link to='/'><button>Home</button></Link>
             <h2 className='Suggestions__title'>Best thing to do is:</h2>
             <p>{suggestion}</p>
-            {suggestion[0] === 'go for a walk' ? <p>1</p> : ""}
-            {suggestion[0] === "take a 15 minute power nap"? <p>2</p> : ""}
+            {suggestion[0] === 'go outside and get some fresh air' ? 
+            <div className='outside'>
+                <video  width="320" height="240" loop autoPlay>
+                    <source  src={outside}type="video/mp4" />
+                 </video>
+                 <a href='https://www.google.com/maps/@41.7570706,-100.6509655,3.96z'><button className='outside__button'>Find Park near me</button></a>
+            </div>
+             : ""}
+            {suggestion[0] === "take a 15 minute power nap"? 
+                 <div className='outside'>
+                 <video  width="320" height="240" loop autoPlay>
+                     <source  src={rain}type="video/mp4" />
+                  </video>
+                  {/* <a href='https://www.google.com/maps/@41.7570706,-100.6509655,3.96z'><button className='outside__button'>Find Park near me</button></a> */}
+             </div>
+            : ""}
             {suggestion[0] === "read a chapter of a good book"?
             <div className='bookflex'>
              <a href='https://hpread.scholastic.com/HP_Book1_Chapter_Excerpt.pdf'><img className='book' src={harrypotter} alt='harry potter and the sorcerers stone'/></a> 
