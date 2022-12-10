@@ -3,7 +3,7 @@
 @use '../../styles/fonts';
 
 .wheel{
-    background-color:#AB93C9 ;
+    background-color:#801336  ;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,7 +11,7 @@
     overflow: hidden;
     height: 100vh;
     &__container{
-    background-image: url(../../assets/background.png);
+    background-image: url('../../assets/background.png');
     height: 500px;
     width: 500px;
     display: flex;

@@ -1,11 +1,14 @@
-import './wheel.scss';
-import { Link} from "react-router-dom";
+import './Wheel.scss';
+import { Link,useNavigate} from "react-router-dom";
 import shovel from '../../assets/shovel.png';
 import cog from '../../assets/cog.png';
 
-function wheel({emotions}){
+function Wheel({emotions}){
+    const navigate = useNavigate();
 
-    // const edited=`wheel__emotion--text${0}`+=1;
+    // setTimeout(() => {
+    //     navigate(`/wheel/${emotion.id}`);
+    //   }, "4000")
 
     return(
         <div className='wheel'>
@@ -16,11 +19,11 @@ function wheel({emotions}){
             <img className='wheel__cog'src={cog} alt='circle'/>
             <div className='wheel__container'>
             {emotions.map((emotion)=>{
-                return <Link  to= {`/wheel/${emotion.id}`} key={emotion.id} className={`wheel__emotion--text${emotion.id}`}>{emotion.emotion}</Link>
+                return <Link to= {`/wheel/${emotion.id}`} key={emotion.id} className={`wheel__emotion--text${emotion.id}`}>{emotion.emotion}</Link>
              })}
              </div>
         </div>
     )
 }
 
-export default wheel;
+export default Wheel;
