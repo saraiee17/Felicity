@@ -6,7 +6,7 @@
             {"tired":"take a 15 minute power nap"},
             {"burntout": "read a chapter of a good book"},
             {"empty":"take a social media break"},
-            {"lonely":"do somethng small that makes you happy"}
+            {"lonely":"do something small that makes you happy"}
         ]
         
     },
@@ -17,7 +17,7 @@
             {"overthinking":"write down your thoughts"},
             {"anxious": "go outside and get some fresh air"},
             {"worried": "read a chapter of a good book"},
-            {"confused": "talk to a friend"}
+            {"confused": "talk to a friend. Call someone, write a letter, or reach out in person."}
         ]
     },
     {
@@ -25,7 +25,7 @@
         "emotion":"anger",
         "inneremotions":[
             {"stressed":"take 3 deep breaths and empty your mind/meditate"},
-            {"restless":"smell lavendar"},
+            {"restless":"go outside and get some fresh air"},
             {"offended":"write down your thoughts"},
             {"bored":"read a chapter of a good book"}
         ]
@@ -46,10 +46,10 @@
         "id": "5",
         "emotion":"enjoyment",
         "inneremotions": [
-            {"peaceful": "Congrats!! Ponder why and enjoy the flowers."},
-            {"curious": "Congrats!! Ponder why and enjoy the flowers."},
-            {"appreciated":"Congrats!! Ponder why and enjoy the flowers."},
-            {"excited":"Congrats!! Ponder why and enjoy the flowers."}
+            {"peaceful": "Ponder why and enjoy. Congrats!! "},
+            {"curious": "Ponder why and enjoy. Congrats!! "},
+            {"appreciated":"Ponder why and enjoy. Congrats!! "},
+            {"excited":"Ponder why and enjoy. Congrats!! "}
         ]
         
     }
