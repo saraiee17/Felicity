@@ -4,7 +4,6 @@ import logo from '../../assets/felicitylogo.png';
 import login2 from '../../assets/login2.png';
 
 
-
 function Main(){
     // const navigate = useNavigate();
 

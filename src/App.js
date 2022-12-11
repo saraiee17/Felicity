@@ -8,19 +8,20 @@ import Login from './components/Login/Login';
 import Signup  from './components/SignUp/SignUp';
 import User from './components/Calendar/Calendar';
 import data from './data.json';
+import Nav from './components/Nav/Nav';
 
 function App() {
   return (
     <div className='app'>
       <BrowserRouter>
         <Routes>
-        <Route path='/' element ={<Main/>} />
+        <Route path='/' element ={<Main/>}/>
         <Route path='/wheel' element ={<Wheel emotions={data}/>} />
         <Route path='/wheel/:id' element ={<SecondWheel data={data}/>} />
         <Route path='/suggestions/:id/:index' element ={<Suggestions data={data}/>} />
         <Route path='/login' element ={<Login/>} /> 
         <Route path='/signup' element ={<Signup/>} /> 
-         <Route path='/calendar' element ={<User/>} />
+        <Route path='/calendar' element ={<User/>} />
         </Routes>
       </BrowserRouter>
     </div>
