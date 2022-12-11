@@ -1,7 +1,7 @@
 import './App.scss';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import Main from './pages/Main/Main';
-import Wheel from './pages/Wheel/Wheel';
+import Main from './pages/main/main';
+import Wheel from './pages/wheel/wheel';
 import SecondWheel from './components/SecondWheel/SecondWheel.js';
 import Suggestions from './components/Suggestions/Suggestions';
 import Login from './components/Login/Login';

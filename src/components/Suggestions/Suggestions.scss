@@ -1,0 +1,118 @@
+.suggestions{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:  center;
+    &__div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:  center;
+        background-color: white;
+        color: #801336;
+        border-radius: 0.5rem;
+        padding: 2rem 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.book{
+    max-height: 100px;
+}
+
+.outside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__video{
+        border-radius: 0.5rem;
+    }
+}
+
+.sleep{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__sheep{
+        max-width: 100px;
+    }
+}
+
+.screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__flex{
+   display: flex;
+    }
+   &__phone{
+    max-width: 170px;
+   }
+}
+
+.friend{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+}
+
+.stretch{
+    display: flex;
+    &__img{
+        max-height: 210px;
+    }
+}
+
+.others{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__img{
+        max-height: 180px;
+    }
+}
+
+.write{
+    &__title{
+        background-color: #801336;
+        min-width: 200px;
+        min-height: 200px;
+        color: white;
+        max-width: 80vw;
+    }
+}
+
+.happy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@keyframes drop {
+    0% {
+      transform: translateY(0vh);
+    }
+    75% {
+      transform: translateY(90vh);
+    }
+    100% {
+      transform: translateY( 100vh);
+    }
+  }
+  
+
+.enjoy{
+    height: 100vh;
+    position: absolute;
+    animation-name: drop;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+}

@@ -30,10 +30,10 @@
         border-radius: 50%;
         border: none;
     }
-    &__container:active{
-        animation: spin 4s;
-        animation-timing-function: linear;
-    }
+    // &__container:active{
+    //     animation: spin 4s;
+    //     animation-timing-function: linear;
+    // }
     &__text{
         &0{
         color: #c68cff;

@@ -21,10 +21,10 @@
     border-radius: 50%;
     border: none;
     }
-    &__container:active{
-        animation: spin 4s;
-        animation-timing-function: linear;
-    }
+    // &__container:active{
+    //     animation: spin 4s;
+    //     animation-timing-function: linear;
+    // }
 &__flex{
     display: flex;
     justify-content: space-between;
