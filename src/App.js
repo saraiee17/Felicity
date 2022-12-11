@@ -23,6 +23,7 @@ function App() {
         <Route path='/signup' element ={<Signup/>} /> 
         <Route path='/calendar' element ={<User/>} />
         </Routes>
+        <Nav/>
       </BrowserRouter>
     </div>
   );
