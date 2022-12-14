@@ -21,17 +21,10 @@
     border-radius: 50%;
     border: none;
     }
-    &__container:hover{
+    &__container:focus-within{
         animation: spin 4s;
         animation-timing-function: linear;
-        animation-delay: 0.5s;
     }
-// &__flex{
-//     display: flex;
-// }
-// &__title{
-//     margin-right: 12rem;
-// }
 &__cog{
     max-width: 60px;
     position: absolute;
@@ -49,6 +42,11 @@
         transform: translate(70%)rotate(-90deg);
         text-align: center;
         }
+        &1:focus{
+            border-top: 6px solid colors.$primary;
+            color:colors.$secondary;
+            font-weight: 600;
+        }
         &2{
             color: colors.$tertiary;
             background-color: white;
@@ -57,6 +55,11 @@
             clip-path: polygon(100% 0,50% 100%, 0 0);
             transform: translate(60%,-55%)rotate(-20deg);
             text-align: center;
+        }
+        &2:focus{
+            border-top: 6px solid colors.$primary;
+            color:colors.$secondary;
+            font-weight: 600;
         }
         &3{
             color: colors.$tertiary;
@@ -67,6 +70,11 @@
             transform: translate(70%,-50%)rotate(30deg);
             text-align: center;
         }
+        &3:focus{
+            border-top: 6px solid colors.$primary;
+            color:colors.$secondary;
+            font-weight: 600;
+        }
         &4{
             color:colors.$tertiary;
             background-color: white;
@@ -76,6 +84,11 @@
             transform: translate(30%)rotate(90deg);
             text-align: center;
         }
+        &4:focus{
+            border-top: 6px solid colors.$primary;
+            color:colors.$secondary;
+            font-weight: 600;
+        }
         &5{
             color: colors.$tertiary;
             background-color: white;
@@ -84,6 +97,11 @@
             clip-path: polygon(100% 0,50% 100%, 0 0);
             transform: translate(-200%,60%)rotate(-180deg);
             text-align: center;
+        }
+        &5:focus{
+            border-top: 6px solid colors.$primary;
+            color:colors.$secondary;
+            font-weight: 600;
         }
     }
 }

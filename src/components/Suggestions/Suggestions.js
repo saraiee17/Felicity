@@ -77,25 +77,25 @@ const handleWriteInput = event =>{
                      <source  src={rain}type="video/mp4" />
                   </video>
                   <a className='a' href='https://www.webmd.com/balance/features/get-energy-back'><button className='button'>Longterm fatigue?</button></a>
-                  <img className='sleep__sheep' src={sheep} alt='sheep'/>
+                  <img className='sleep__sheep' src={sheep} alt='a sheep jumping over the screen'/>
              </div>
             : ""}
             {suggestion[0] === "read a chapter of a good book"?
             <div className='bookflex'>
-                <a className='a' href='https://hpread.scholastic.com/HP_Book1_Chapter_Excerpt.pdf'><img className='book' src={harrypotter} alt='harry potter and the sorcerers stone'/></a> 
-                <a className='a' href='https://antilogicalism.com/wp-content/uploads/2018/04/slaughterhouse-five.pdf'><img className='book' src={kurt} alt='kurt book'/></a> 
-                <a className='a' href='https://s3.amazonaws.com/scschoolfiles/112/j-r-r-tolkien-lord-of-the-rings-01-the-fellowship-of-the-ring-retail-pdf.pdf'><img className='book' src={rings} alt='kurt book'/></a> 
+                <a className='a' href='https://hpread.scholastic.com/HP_Book1_Chapter_Excerpt.pdf'><img className='book' src={harrypotter} alt='harry potter and the sorcerers stone novel'/></a> 
+                <a className='a' href='https://antilogicalism.com/wp-content/uploads/2018/04/slaughterhouse-five.pdf'><img className='book' src={kurt} alt='slaughterhouse five by Kurt Vonnegut novel'/></a> 
+                <a className='a' href='https://s3.amazonaws.com/scschoolfiles/112/j-r-r-tolkien-lord-of-the-rings-01-the-fellowship-of-the-ring-retail-pdf.pdf'><img className='book' src={rings} alt='Lord of the Rings, Fellowship of the ring, novel'/></a> 
              </div>
              : ""}
             {suggestion[0] === "take a social media break"? 
             <div className='screen'>
                 <div className='screen__flex' >
-                    <img className='screen__phone' src={phone} alt='mute phone'/>
+                    <img className='screen__phone' src={phone} alt='cartoon of women muting her phone'/>
                 </div >
                 <div className='screen__buttonflex'>
-                    <a className='a' href='https://apps.apple.com/us/app/freedom-block-distractions/id1269788228?mt=8'><button className='button'>iOS</button></a>
-                    <a className='a' href='https://play.google.com/store/apps/details?id=to.freedom.android2&pli=1'><button className='button'>Android </button></a>
-                    <a className='a' href='https://chrome.google.com/webstore/detail/strict-workflow/cgmnfnmlficgeijcalkgnnkigkefkbhd?hl=en'><button className='button'>Desktop</button></a>
+                    <a className='a book' href='https://apps.apple.com/us/app/freedom-block-distractions/id1269788228?mt=8'><button className='button'>iOS</button></a>
+                    <a className='a book' href='https://play.google.com/store/apps/details?id=to.freedom.android2&pli=1'><button className='button'>Android </button></a>
+                    <a className='a book' href='https://chrome.google.com/webstore/detail/strict-workflow/cgmnfnmlficgeijcalkgnnkigkefkbhd?hl=en'><button className='button'>Desktop</button></a>
                 </div>
             </div>
             : ""}
@@ -160,9 +160,9 @@ const handleWriteInput = event =>{
             {suggestion[0] === "do something nice for someone else"? 
             <div className='others'>
                 <div  className='others__flex'>
-                    <img className='others__1'src={others2} alt='giving gift to someone else'/> 
-                    <img className='others__2'src={others} alt='giving gift to someone else'/>      
-                    <img className='others__3'src={others3} alt='giving gift to someone else'/> 
+                    <img className='others__1'src={others2} alt='a boy sharing his cookies with a girl'/> 
+                    <img className='others__2'src={others} alt='someone giving a gift to someone else who is thankful'/>      
+                    <img className='others__3'src={others3} alt='a boy carrying groceries for an elderly lady'/> 
                 </div>
                 <a className='a' href='https://bucketlistjourney.net/random-acts-of-kindness-ideas-and-examples/'><button className='button'>More Ideas</button></a>
             </div>
@@ -185,7 +185,7 @@ const handleWriteInput = event =>{
             </div> 
             : ""}
             {suggestion[0] === "Ponder why and enjoy"? 
-                <img className='enjoy'src={enjoy} alt='cascade of flowers'/>
+                <img className='enjoy'src={enjoy} alt='cascade of flowers falling down'/>
             : ""}
             </div>
         </div>
