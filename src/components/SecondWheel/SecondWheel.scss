@@ -4,19 +4,19 @@
 
 .secondwheel{
     background-color: #801336 ;
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     overflow: hidden;
-    &__title{
-        margin-right: 7rem;
-    }
+    // &__title{
+    //     margin-right: 7rem;
+    // }
     &__cog{
         max-width: 60px;
         position: absolute;
-        top: 19rem;
+        top: 16rem;
         z-index: 100;
     }
     &__container{
@@ -30,13 +30,14 @@
         border-radius: 50%;
         border: none;
     }
-    // &__container:active{
-    //     animation: spin 4s;
-    //     animation-timing-function: linear;
-    // }
+    &__container:hover{
+        animation: spin 4s;
+        animation-timing-function: linear;
+        animation-delay: 0.5s;
+    }
     &__text{
         &0{
-        color: #c68cff;
+        color: brown;
         background-color: white;
         width:300px;
         height: 200px;
@@ -45,7 +46,7 @@
         text-align: center;
         }
         &1{
-            color: #c68cff;
+            color: brown;
             background-color: white;
             width:300px;
             height: 200px;
@@ -54,7 +55,7 @@
             text-align: center;
         }
         &2{
-            color: #c68cff;
+            color:brown;
             background-color: white;
             width:300px;
             height: 200px;
@@ -63,7 +64,7 @@
             text-align: center;
         }
         &3{
-            color: #c68cff;
+            color: brown;
             background-color: white;
             width:300px;
             height: 200px;
@@ -73,4 +74,8 @@
             }
     }
 
+}
+
+a{
+    text-decoration: none;
 }

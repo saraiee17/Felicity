@@ -1,15 +1,17 @@
 import './Nav.scss';
 import {Link} from 'react-router-dom';
 
-function Nav(){
+
+function Nav({handleLogout}){
     return(
-        <>
-            <span class="material-symbols-outlined arrow">arrow_back</span>
-            <Link to='/login'><span class="material-symbols-outlined">login</span></Link>
-            <Link to='/login'><span class="material-symbols-outlined">cottage</span></Link>
-            <Link to='/calendar'><span class="material-symbols-outlined">account_circle</span></Link>
-        </>
+        <div className='nav'>
+            <div onClick={() => window.history.back()}><span class="material-symbols-outlined nav__icon">arrow_back</span></div>
+            <Link to='/'><span className="material-symbols-outlined nav__icon">cottage</span></Link>
+            <Link to='/login'><span className="material-symbols-outlined nav__icon">login</span></Link>
+            <Link to='/calendar'><span className="material-symbols-outlined nav__icon">account_circle</span></Link>
+            <span onClick={()=>handleLogout()} class="material-symbols-outlined nav__icon">logout</span>
+        </div>
     )
 }
 
-export default Nav; 
+export default Nav;

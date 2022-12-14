@@ -17,7 +17,7 @@
             {"overthinking":"write down your thoughts"},
             {"anxious": "go outside and get some fresh air"},
             {"worried": "read a chapter of a good book"},
-            {"confused": "talk to a friend. Call someone, write a letter, or reach out in person."}
+            {"confused": "talk to a friend."}
         ]
     },
     {
@@ -46,10 +46,10 @@
         "id": "5",
         "emotion":"enjoyment",
         "inneremotions": [
-            {"peaceful": "Ponder why and enjoy. Congrats!! "},
-            {"curious": "Ponder why and enjoy. Congrats!! "},
-            {"appreciated":"Ponder why and enjoy. Congrats!! "},
-            {"excited":"Ponder why and enjoy. Congrats!! "}
+            {"peaceful": "Ponder why and enjoy"},
+            {"curious": "Ponder why and enjoy"},
+            {"appreciated":"Ponder why and enjoy"},
+            {"excited":"Ponder why and enjoy"}
         ]
         
     }

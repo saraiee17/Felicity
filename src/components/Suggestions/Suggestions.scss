@@ -1,5 +1,6 @@
+@use '../../styles/mixins';
 .suggestions{
-    height: 100vh;
+    height: 90vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -17,8 +18,23 @@
     }
 }
 
+.a{
+    text-decoration: none;
+}
+
+.a:hover{
+    text-decoration: none;
+    border: none;
+    border-top: none;
+    border-bottom: none;
+}
+
+
 .book{
     max-height: 100px;
+}
+.book:hover{
+    color: #801336;
 }
 
 .outside{
@@ -36,9 +52,40 @@
     align-items: center;
     &__sheep{
         max-width: 100px;
+        position: absolute;
+        top: 28rem;
+        left:2rem;
+        animation: arc 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
     }
 }
 
+
+@keyframes arc {
+    0% {
+        top: 500px;
+        left: -10px;
+    }
+    // 25%{
+    //     left: 150px;
+    //     top: 250px;
+    // }
+    50% {
+        top:300px;
+        left: 200px;
+        transform: rotate(20deg);
+    }
+    // 75%{
+    //     left: 450px;
+    //     top: 250px;
+    // }
+    100%{
+        top: 700px;
+        left: 500px;
+    }
+}
+  
 .screen{
     display: flex;
     flex-direction: column;
@@ -48,6 +95,9 @@
     }
    &__phone{
     max-width: 170px;
+   }
+   &__buttonflex{
+    display: flex;
    }
 }
 
@@ -59,6 +109,59 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    }
+    &__1{
+        display: none;
+        @include mixins.desktop{
+            display: block;
+        }
+    }
+    &__2{
+        display: none;
+        @include mixins.tablet{
+            display: block;
+        }
+        @include mixins.desktop{
+            display: block;
+        }
+    }
+    &__3{
+        @include mixins.tablet{
+            display:none;
+        }
+        @include mixins.desktop{
+            display: block;
+        }
+    }
+}
+
+.breathe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include mixins.tablet{
+        flex-direction: row;
+    }
+    &__video1{
+        max-height: 150px;
+        @include mixins.tablet{
+            max-height: 180px;
+            width: 180px;
+        }
+        @include mixins.desktop{
+            max-height: 180px;
+            width:  320px
+        }
+    }
+    &__video2{
+        max-height: 150px;
+        @include mixins.tablet{
+            max-height: 300px;
+        }
+        @include mixins.desktop{
+            margin-right: 4rem;
+        }
     }
 }
 
@@ -73,8 +176,25 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    &__img{
+    &__flex{
+        display: flex;
+    }
+    &__1{
         max-height: 180px;
+        display: none;
+        @include mixins.desktop{
+            display: block;
+        }
+    }
+    &__2{
+        max-height: 180px;
+    }
+    &__3{
+        max-height: 180px;
+        display: none;
+        @include mixins.desktop{
+            display: block;
+        }
     }
 }
 
@@ -98,21 +218,57 @@
 @keyframes drop {
     0% {
       transform: translateY(0vh);
+      display: block;
     }
     75% {
-      transform: translateY(90vh);
+      transform: translateY(80vh);
+      display: block;
     }
     100% {
-      transform: translateY( 100vh);
+      transform: translateY( 90vh);
+      display: block;
     }
   }
   
 
 .enjoy{
     height: 100vh;
+    width:100vh;
     position: absolute;
     animation-name: drop;
     animation-duration: 3s;
     animation-iteration-count: 1;
     animation-timing-function: ease-in;
 }
+
+.button{
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, brown 0,  #801336 100%);
+    border: 0;
+    border-radius: 100px;
+    box-shadow: rgba(45, 35, 66, .4) 0 2px 4px,rgba(45, 35, 66, .3) 0 7px 13px -3px,rgba(58, 65, 111, .5) 0 -3px 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    height: 48px;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 16px;
+    padding-right: 16px;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  
+  
+
+ .button:hover{
+    background-image: radial-gradient(100% 100% at 100% 0, #801336 0,  brown 100%);
+    border-top: none;
+    border-bottom: none;
+ }
+
+ 

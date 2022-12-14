@@ -3,10 +3,11 @@ import {Link,useNavigate} from 'react-router-dom';
 import axios from 'axios';
 import { useState } from 'react';
 
-function Login(){
+function Login({handleLogin}){
     const [error, setError] = useState(false);
     const navigate = useNavigate();
 
+   
     const handleSubmit = (event) => {
         event.preventDefault();
         
@@ -16,6 +17,7 @@ function Login(){
         })
             .then((response) => {
                 sessionStorage.setItem("token", response.data.token);
+                handleLogin(response.data.user);
                 navigate('/calendar');
             })
             .catch((error) => {
@@ -23,6 +25,7 @@ function Login(){
                 setError(true);
             });
     };
+
     return(
         <div className='login'>
             <form className="login__form" onSubmit={handleSubmit}>
