@@ -1,3 +1,6 @@
+@use '../../styles/mixins';
+@use '../../styles//colors';
+
 .login{
     min-height: 90vh;
     display: flex;
@@ -5,7 +8,7 @@
     align-items: center;
     justify-content: center;
     &__form{
-    color:#801336;
+    color: colors.$primary;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -23,13 +26,13 @@
 
         text-align: center;
         font-size: 1.5rem;
-        border-bottom: 5px solid #AB93C9;
+        border-bottom: 5px solid colors.$secondary;
         padding-bottom: 0.5rem;
     }
     &__button {
         margin-top: 1rem;
-        background-color: #AB93C9;
-        border: 1px solid #AB93C9;
+        background-color: colors.$secondary;
+        border: 1px solid colors.$secondary;
         color: #fff;
         border-radius: 0.5rem;
         padding: 0.5rem;
@@ -37,7 +40,7 @@
         transition: background-color 0.15s;
 
         &:hover {
-            background-color: #801336;
+            background-color: colors.$primary;
         }
     }
     &__message {
@@ -46,3 +49,4 @@
         margin-top: 2rem;
     }
 }
+

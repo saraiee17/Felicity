@@ -13,6 +13,7 @@ import Plot from "react-plotly.js";
 
 
 
+
 function User({failedAuth,user}){
 //use state to hold emotion data for user
 const [graphData,setGraphData] =useState([])
@@ -72,35 +73,34 @@ const emotionCount = graphData.reduce((counts, emotion) => {
     // Return the updated counts object
     return counts;
   }, {});
-  const name = Object.keys(emotionCount);
 
 
     return(
         <div className='calendar'>
             <h2 className='calendar__title'>Welcome {user.first_name}</h2>
 
-         {  graphData.length>0?  <Calendar localizer={localizer}
+         {  graphData.length>0?  <Calendar className='calendar__calendar'localizer={localizer}
                 events={calendarData}
                 startAccessor="start"
                 endAccessor="end"
-                style={{ height: 300, width:600}} />: <span>Loading</span>}
+                style={{ height: 300, width:450}} />: <span>Loading</span>}
 
         <div className='user__graph'>
-        <Plot
+        <Plot className='user__graph1'
         data={[  
           {type: 'bar', x: Object.keys(emotionCount), y: Object.values(emotionCount)}
         ]}
-        layout={ {width: 320, height: 240} } />
+        layout={ {width: 320, height: 220} } />
 
-      <Plot
+      <Plot className='calendar__graph2'
           data={ [{
             values: Object.values(emotionCount),
             labels: Object.keys(emotionCount),
             type: 'pie'
           }]}
-          layout={ {height: 240,
+          layout={ {height: 220,
             width: 320}}/>
-        <Plot
+        <Plot className='calendar__graph3'
       data={[
         {
           x: Object.keys(emotionCount),
@@ -110,7 +110,7 @@ const emotionCount = graphData.reduce((counts, emotion) => {
           }
         }
       ]}
-      layout={ {width: 320, height: 240} } />
+      layout={ {width: 320, height: 220} } />
         </div>
         </div>
     )

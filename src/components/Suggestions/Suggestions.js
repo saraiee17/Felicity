@@ -185,7 +185,7 @@ const handleWriteInput = event =>{
             </div> 
             : ""}
             {suggestion[0] === "Ponder why and enjoy"? 
-            <img className='enjoy'src={enjoy} alt='cascade of flowers'/>
+                <img className='enjoy'src={enjoy} alt='cascade of flowers'/>
             : ""}
             </div>
         </div>

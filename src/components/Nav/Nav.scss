@@ -1,6 +1,8 @@
 @use '../../styles/fonts';
+@use '../../styles/colors';
 
 .nav{
+    position: fixed;
     z-index: 20;
     background-color: white;
     color: grey;
@@ -8,14 +10,18 @@
     align-content: center;
     justify-content: space-around;
     text-decoration: none;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 2px 16px rgba(0, 0, 0, 0.1);
     &__icon{
         height: 100%;
         padding: 1rem;
     }
     &__icon:hover{
-        border-top: 3px solid #801336;
-        border-bottom: 3px solid #801336;
-        color: #801336;
+        border-top: 3px solid colors.$primary;
+        border-bottom: 3px solid colors.$primary;
+        color: colors.$primary;
     }
 }
 

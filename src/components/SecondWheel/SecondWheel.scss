@@ -3,7 +3,7 @@
 @use '../../styles/fonts';
 
 .secondwheel{
-    background-color: #801336 ;
+    background-color: colors.$primary;
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -26,7 +26,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        background-color: #734e3c;
+        background-color: colors.$tertiary;
         border-radius: 50%;
         border: none;
     }
@@ -37,7 +37,7 @@
     }
     &__text{
         &0{
-        color: brown;
+        color: colors.$tertiary;
         background-color: white;
         width:300px;
         height: 200px;
@@ -46,7 +46,7 @@
         text-align: center;
         }
         &1{
-            color: brown;
+            color: colors.$tertiary;
             background-color: white;
             width:300px;
             height: 200px;
@@ -55,7 +55,7 @@
             text-align: center;
         }
         &2{
-            color:brown;
+            color:colors.$tertiary;
             background-color: white;
             width:300px;
             height: 200px;
@@ -64,7 +64,7 @@
             text-align: center;
         }
         &3{
-            color: brown;
+            color: colors.$tertiary;
             background-color: white;
             width:300px;
             height: 200px;
