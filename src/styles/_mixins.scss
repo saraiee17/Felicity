@@ -1,0 +1,98 @@
+@mixin tablet {
+    @media (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 1280px) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (min-width: 500px) {
+        @content;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform:rotate(0deg)
+    }
+    25%{
+        transform:rotate(90deg)
+    }
+    50% {
+       transform:rotate(180deg)
+    }
+    75%{
+       transform:rotate(270deg)
+    }
+    100%{
+         transform:rotate(360deg)
+    }
+}
+
+@keyframes arc {
+    0% {
+        top: 500px;
+        left: -10px;
+    }
+    50% {
+        top:300px;
+        left: 200px;
+        transform: rotate(20deg);
+    }
+    100%{
+        top: 700px;
+        left: 500px;
+    }
+}
+
+@keyframes arcTablet{
+    0% {
+        top: 500px;
+        left: -10px;
+    }
+    50% {
+        top:250px;
+        left: 400px;
+        transform: rotate(25deg);
+    }
+    100%{
+        top: 700px;
+        left: 900px;
+    }
+}
+
+@keyframes arcDesk{
+    0% {
+        top: 500px;
+        left: -10px;
+    }
+    50% {
+        top:200px;
+        left: 600px;
+        transform: rotate(30deg);
+    }
+    100%{
+        top: 600px;
+        left: 1200px;
+    }
+}
+
+@keyframes drop {
+    0% {
+      transform: translateY(0vh);
+      display: block;
+    }
+    75% {
+      transform: translateY(80vh);
+      display: block;
+    }
+    100% {
+      transform: translateY( 90vh);
+      display: block;
+    }
+  }

@@ -1,0 +1,43 @@
+@use '../../styles/mixins';
+@import '~react-big-calendar/lib/css/react-big-calendar.css';
+
+
+.calendar{
+    height:100%;
+    display: flex;
+    flex-direction: column;
+   align-items: center;
+   &__title{
+    align-self: flex-start;
+    padding-top: 1rem;
+    padding-left: 1rem;
+   }
+    &__calendar{
+      min-height: 18.75rem;
+    }
+    &__graph{
+      padding-bottom: 3rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      @include mixins.desktop{
+        flex-direction: row;
+      }
+    }
+}
+
+.button{
+    display: flex;
+    align-items: center;
+}
+
+/* react calendar */
+
+.rbc-toolbar {
+  display: flex;
+}
+.rbc-toolbar-label{
+  width:20%
+}
+

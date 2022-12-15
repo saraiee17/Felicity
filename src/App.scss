@@ -1,0 +1,30 @@
+@use './styles/mixins';
+@use './styles/colors';
+@use './styles/fonts';
+
+*,*::before,*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.app{
+  background-color: colors.$primary;
+  color:white;
+  font-family: 'Product-sans',sans-serif;
+}
+
+.material-symbols-outlined {
+  font-family: 'Material Symbols Outlined';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 1.5rem;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  color:inherit;
+  white-space: nowrap;
+  word-wrap: normal;
+  direction: ltr;
+}

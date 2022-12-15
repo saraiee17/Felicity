@@ -1,0 +1,280 @@
+@use '../../styles/mixins';
+@use '../../styles//colors';
+.suggestions{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:  center;
+    &__div{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content:  center;
+        background-color: white;
+        color: colors.$primary;
+        border-radius: .5rem;
+        padding: 2rem 1.5rem;
+        margin-bottom: 1rem;
+    }
+}
+
+.a{
+    text-decoration: none;
+}
+
+.a:hover{
+    text-decoration: none;
+    border: none;
+    border-top: none;
+    border-bottom: none;
+}
+
+
+.book{
+    max-height: 8rem;
+    margin: 1rem;
+    @include mixins.tablet{
+        max-height: 10rem;
+    }
+    @include mixins.desktop{
+        max-height: 15rem;
+    }
+    &flex{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+.book:hover{
+    color: colors.$primary;
+}
+
+.outside{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__video{
+        border-radius: .5rem;
+    }
+}
+
+.sleep{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__sheep{
+        max-width: 6.25rem;
+        position: absolute;
+        top: 28rem;
+        left:2rem;
+        animation: arc 10s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+        @include mixins.tablet{
+            animation: arcTablet 15s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+        @include mixins.desktop{
+            animation: arcDesk 20s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+    }
+}
+
+
+
+  
+.screen{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__flex{
+   display: flex;
+    }
+   &__phone{
+    max-width: 10.625rem;
+   }
+   &__buttonflex{
+    display: flex;
+   }
+   &__desktop{
+    display: none;
+    @include mixins.desktop{
+        display: block;
+    }
+   }
+}
+.phone{
+    max-width: 10.625rem;
+}
+
+
+.friend{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+    &__1{
+        display: none;
+        @include mixins.desktop{
+            display: block;
+        }
+    }
+    &__2{
+        display: none;
+        @include mixins.tablet{
+            display: block;
+        }
+        @include mixins.desktop{
+            display: block;
+        }
+    }
+    &__3{
+        @include mixins.tablet{
+            display:none;
+        }
+        @include mixins.desktop{
+            display: block;
+        }
+    }
+}
+
+.breathe{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    @include mixins.tablet{
+        flex-direction: row;
+    }
+    &__video1{
+        max-height: 9.375rem;
+        @include mixins.tablet{
+            max-height: 11.25rem;
+            width: 11.25rem;
+        }
+        @include mixins.desktop{
+            max-height: 11.25rem;
+            width:  20rem
+        }
+    }
+    &__video2{
+        max-height: 9.375rem;
+        @include mixins.tablet{
+            max-height: 18.75rem;
+        }
+        @include mixins.desktop{
+            margin-right: 4rem;
+        }
+    }
+}
+
+.stretch{
+    display: flex;
+    &__img{
+        max-height: 13.125rem;
+    }
+}
+
+.others{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    &__flex{
+        display: flex;
+    }
+    &__1{
+        max-height: 11.25rem;
+        display: none;
+        @include mixins.desktop{
+            display: block;
+        }
+    }
+    &__2{
+        max-height: 11.25rem;
+    }
+    &__3{
+        max-height: 11.25rem;
+        display: none;
+        @include mixins.desktop{
+            display: block;
+        }
+    }
+}
+
+.write{
+    &__title{
+        background-color: colors.$primary;
+        min-width: 12.5rem;
+        min-height: 12.5rem;
+        color: white;
+        max-width: 70vw;
+        overflow-wrap: break-word;
+    }
+    &__input{
+        border-radius: .08rem;
+        border: .0625rem solid grey;
+        height: 2.25rem;
+        padding: 0 1rem;
+        margin-top: 1rem;
+        width: 100%;
+        color:transparent;
+    }
+}
+
+
+.happy{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+  
+
+.enjoy{
+    height: 100vh;
+    width:100%;
+    position: absolute;
+    animation-name: drop;
+    animation-duration: 3s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease-in;
+}
+
+.button{
+    align-items: center;
+    appearance: none;
+    background-image: radial-gradient(100% 100% at 100% 0, colors.$tertiary 0,  colors.$primary 100%);
+    border: 0;
+    border-radius: 6.25rem;
+    box-shadow: rgba(45, 35, 66, .4) 0 .125rem .25rem,rgba(45, 35, 66, .3) 0 .4375rem .8125rem -0.1875rem,rgba(58, 65, 111, .5) 0 -0.1875rem 0 inset;
+    box-sizing: border-box;
+    color: #fff;
+    height: 3rem;
+    justify-content: center;
+    line-height: 1;
+    list-style: none;
+    overflow: hidden;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+    text-align: left;
+    text-decoration: none;
+    font-size: 1.125rem;
+  }
+  
+  
+
+ .button:hover{
+    background-image: radial-gradient(100% 100% at 100% 0, colors.$primary 0,  colors.$tertiary 100%);
+    border-top: none;
+    border-bottom: none;
+ }
+
+ 

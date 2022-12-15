@@ -1,0 +1,56 @@
+[
+    {
+        "id": "1",
+        "emotion":"sad",
+        "inneremotions": [ 
+            {"tired":"take a 15 minute power nap"},
+            {"burntout": "read a chapter of a good book"},
+            {"empty":"take a social media break"},
+            {"lonely":"do something small that makes you happy"}
+        ]
+        
+    },
+    {
+        "id": "2",
+        "emotion":"fear",
+        "inneremotions":[
+            {"overthinking":"write down your thoughts"},
+            {"anxious": "go outside and get some fresh air"},
+            {"worried": "read a chapter of a good book"},
+            {"confused": "talk to a friend."}
+        ]
+    },
+    {
+        "id": "3",
+        "emotion":"anger",
+        "inneremotions":[
+            {"stressed":"take 3 deep breaths and empty your mind/meditate"},
+            {"restless":"go outside and get some fresh air"},
+            {"offended":"write down your thoughts"},
+            {"bored":"read a chapter of a good book"}
+        ]
+        
+    },
+    {
+        "id": "4",
+        "emotion":"dislike",
+        "inneremotions": [
+            {"disgust":"Practice deep breathing"},
+            {"lazy":"reduce screentime"},
+            {"failure":"do something nice for someone else"},
+            {"jealous":"Take 10 minutes to do something calming"}
+        ]
+        
+    },
+    {
+        "id": "5",
+        "emotion":"enjoyment",
+        "inneremotions": [
+            {"peaceful": "Ponder why and enjoy"},
+            {"curious": "Ponder why and enjoy"},
+            {"appreciated":"Ponder why and enjoy"},
+            {"excited":"Ponder why and enjoy"}
+        ]
+        
+    }
+]
