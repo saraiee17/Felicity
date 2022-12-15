@@ -1,4 +1,4 @@
-import './wheel.scss';
+import './wheelPage.scss';
 import { Link,useNavigate} from "react-router-dom";
 import shovel from '../../assets/shovel.png';
 import cog from '../../assets/cog.png';

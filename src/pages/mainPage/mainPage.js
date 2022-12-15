@@ -1,4 +1,4 @@
-import './main.scss';
+import './mainPage.scss';
 import {Link,useNavigate} from 'react-router-dom';
 import logo from '../../assets/felicitylogo.png';
 import login2 from '../../assets/login2.png';
