@@ -9,16 +9,16 @@
 }
 
 .app{
-  background-color: #801336;
+  background-color: colors.$primary;
   color:white;
   font-family: 'Product-sans',sans-serif;
 }
-// #6bc37b
+
 .material-symbols-outlined {
   font-family: 'Material Symbols Outlined';
   font-weight: normal;
   font-style: normal;
-  font-size: 24px;
+  font-size: 1.5rem;
   line-height: 1;
   letter-spacing: normal;
   text-transform: none;

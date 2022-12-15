@@ -1,6 +1,6 @@
 import './Suggestions.scss';
-import {useParams,Link} from 'react-router-dom';
-import {useState} from 'react'
+import {useParams} from 'react-router-dom';
+import {useState,useRef} from 'react'
 import harrypotter from '../../assets/harrypotter.png';
 import kurt from '../../assets/kurt.png';
 import rings from '../../assets/rings.png';
@@ -32,10 +32,24 @@ const array=found.inneremotions;
 const item = array.at(params.index);
 const suggestion= Object.values(item);
 
-//audio for talk to friend
-const playAudio = () => {
-    new Audio(friend).play();
-  }
+// logic to toggle audio for talk to friend
+const audioRef =useRef(null);
+const [isPlaying,setIsPlaying]=useState(false);
+
+const handlePlay = (event) =>{
+    if (isPlaying) {
+        // Pause the song if it is playing
+        audioRef.current.pause();
+        setIsPlaying(false);
+      } else {
+  
+        // Play the song if it is paused
+        audioRef.current.play();
+        setIsPlaying(true);
+      }
+}
+  
+
 
 //logic for write suggestion
 const [writeValue,setWriteValue]=useState('');
@@ -46,7 +60,6 @@ const handleWriteInput = event =>{
 
     return(
         <div className='suggestions'>
-            <Link to='/'><button>Home</button></Link>
             <div className='suggestions__div'>
             <h2 className='suggestions__title'>Best thing to do is:</h2>
             <p>{suggestion}</p>
@@ -55,7 +68,7 @@ const handleWriteInput = event =>{
                 <video  width="320" height="240" loop autoPlay>
                     <source  src={outside}type="video/mp4" />
                  </video>
-                 <a href='https://www.google.com/maps/@41.7570706,-100.6509655,3.96z'><button className='outside__button'>Find Park near me</button></a>
+                 <a className='a' href='https://www.google.com/maps/@41.7570706,-100.6509655,3.96z'><button className='button'>Find Park near me</button></a>
             </div>
              : ""}
             {suggestion[0] === "take a 15 minute power nap"? 
@@ -63,28 +76,30 @@ const handleWriteInput = event =>{
                  <video  width="320" height="240" loop autoPlay>
                      <source  src={rain}type="video/mp4" />
                   </video>
-                  <a href='https://www.webmd.com/balance/features/get-energy-back'><button className='sleep__button'>Longterm fatigue?</button></a>
-                  <img className='sleep__sheep' src={sheep} alt='sheep'/>
+                  <a className='a' href='https://www.webmd.com/balance/features/get-energy-back'><button className='button'>Longterm fatigue?</button></a>
+                  <img className='sleep__sheep' src={sheep} alt='a sheep jumping over the screen'/>
              </div>
             : ""}
             {suggestion[0] === "read a chapter of a good book"?
             <div className='bookflex'>
-             <a href='https://hpread.scholastic.com/HP_Book1_Chapter_Excerpt.pdf'><img className='book' src={harrypotter} alt='harry potter and the sorcerers stone'/></a> 
-             <a href='https://antilogicalism.com/wp-content/uploads/2018/04/slaughterhouse-five.pdf'><img className='book' src={kurt} alt='kurt book'/></a> 
-             <a href='https://s3.amazonaws.com/scschoolfiles/112/j-r-r-tolkien-lord-of-the-rings-01-the-fellowship-of-the-ring-retail-pdf.pdf'><img className='book' src={rings} alt='kurt book'/></a> 
+                <a className='a' href='https://hpread.scholastic.com/HP_Book1_Chapter_Excerpt.pdf'><img className='book' src={harrypotter} alt='harry potter and the sorcerers stone novel'/></a> 
+                <a className='a' href='https://antilogicalism.com/wp-content/uploads/2018/04/slaughterhouse-five.pdf'><img className='book' src={kurt} alt='slaughterhouse five by Kurt Vonnegut novel'/></a> 
+                <a className='a' href='https://s3.amazonaws.com/scschoolfiles/112/j-r-r-tolkien-lord-of-the-rings-01-the-fellowship-of-the-ring-retail-pdf.pdf'><img className='book' src={rings} alt='Lord of the Rings, Fellowship of the ring, novel'/></a> 
              </div>
              : ""}
             {suggestion[0] === "take a social media break"? 
             <div className='screen'>
                 <div className='screen__flex' >
-                <video  width="320" height="240" loop autoPlay>
-                     <source  src={laptop}type="video/mp4" />
-                </video>
-                <img className='screen__phone' src={phone} alt='mute phone'/>
+                    <img className='screen__phone' src={phone} alt='cartoon of women muting her phone'/>
+                    <video className='screen__desktop' width="320" height="240" loop autoPlay>
+                     <source className='screen__desktop' src={laptop}type="video/mp4" />
+                    </video>
+                </div >
+                <div className='screen__buttonflex'>
+                    <a className='a book' href='https://apps.apple.com/us/app/freedom-block-distractions/id1269788228?mt=8'><button className='button'>iOS</button></a>
+                    <a className='a book' href='https://play.google.com/store/apps/details?id=to.freedom.android2&pli=1'><button className='button'>Android </button></a>
+                    <a className='a book' href='https://chrome.google.com/webstore/detail/strict-workflow/cgmnfnmlficgeijcalkgnnkigkefkbhd?hl=en'><button className='button'>Desktop</button></a>
                 </div>
-                <a href='https://apps.apple.com/us/app/freedom-block-distractions/id1269788228?mt=8'><button>iOS</button></a>
-                <a href='https://play.google.com/store/apps/details?id=to.freedom.android2&pli=1'><button>Android </button></a>
-                <a href='https://chrome.google.com/webstore/detail/strict-workflow/cgmnfnmlficgeijcalkgnnkigkefkbhd?hl=en'><button>Desktop</button></a>
             </div>
             : ""}
             {suggestion[0] === "reduce screentime"? 
@@ -93,45 +108,48 @@ const handleWriteInput = event =>{
                 <video  width="320" height="240" loop autoPlay>
                      <source  src={laptop}type="video/mp4" />
                 </video>
-                <img className='screen__phone' src={phone} alt='mute phone'/>
+                <img className='screen__desktop phone' src={phone} alt='cartoon of women muting her phone'/>
                 </div>
-                <a href='https://apps.apple.com/us/app/freedom-block-distractions/id1269788228?mt=8'><button>iOS</button></a>
-                <a href='https://play.google.com/store/apps/details?id=to.freedom.android2&pli=1'><button>Android </button></a>
-                <a href='https://chrome.google.com/webstore/detail/strict-workflow/cgmnfnmlficgeijcalkgnnkigkefkbhd?hl=en'><button>Desktop</button></a>
+                <div className='screen__buttonflex'>
+                    <a className='a' href='https://apps.apple.com/us/app/freedom-block-distractions/id1269788228?mt=8'><button className='button'>iOS</button></a>
+                    <a className='a' href='https://play.google.com/store/apps/details?id=to.freedom.android2&pli=1'><button className='button'>Android </button></a>
+                    <a className='a' href='https://chrome.google.com/webstore/detail/strict-workflow/cgmnfnmlficgeijcalkgnnkigkefkbhd?hl=en'><button className='button'>Desktop</button></a>
+                </div>
             </div>
             : ""}
-            {suggestion[0] === "talk to a friend. Call someone, write a letter, or reach out in person."? 
+            {suggestion[0] === "talk to a friend."? 
             <div className='friend'>
                 <div className='friend__flex'>
-                    <video  width="320" height="240" loop autoPlay>
-                        <source  src={friend1}type="video/mp4" />
+                    <video className='friend__1' width="320" height="240" loop autoPlay >
+                        <source className='friend__1' src={friend1}type="video/mp4" />
                     </video>
-                    <video  width="320" height="240" loop autoPlay>
-                        <source  src={friend2}type="video/mp4" />
+                    <video  className='friend__2' width="320" height="240" loop autoPlay>
+                        <source  className='friend__2'src={friend2}type="video/mp4" />
                     </video>
-                    <video  width="320" height="240" loop autoPlay>
-                        <source  src={friend3}type="video/mp4" />
+                    <video className='friend__3' width="320" height="240" loop autoPlay>
+                        <source  className='friend__3'src={friend3}type="video/mp4" />
                     </video>
                 </div>
-                <button onClick={playAudio}>I'd rather listen</button>
+                <audio ref={audioRef} src={friend} />
+               <button className ='button' onClick={handlePlay}>I'd rather listen</button>
             </div>
             : ""}
             {suggestion[0] === "take 3 deep breaths and empty your mind/meditate"? 
-            <div>
-                <video  width="320" height="240" loop autoPlay>
+            <div className="breathe" >
+                <video className="breathe__video1" width="320" height="240" loop autoPlay>
                      <source  src={breathe}type="video/mp4" />
                 </video>
-                <video  width="320" height="240" loop autoPlay>
+                <video  className="breathe__video2" width="320" height="240" loop autoPlay>
                      <source  src={breathevideo}type="video/mp4" />
                 </video>
             </div>
             : ""}
             {suggestion[0] === "Practice deep breathing"? 
-            <div>
-                <video  width="320" height="240" loop autoPlay>
+            <div className="breathe" >
+                <video  className="breathe__video1" width="320" height="240" loop autoPlay>
                         <source  src={breathe}type="video/mp4" />
                 </video>
-                <video  width="320" height="240" loop autoPlay>
+                <video className="breathe__video2"  width="320" height="240" loop autoPlay>
                         <source  src={breathevideo}type="video/mp4" />
                 </video>
             </div>
@@ -146,11 +164,11 @@ const handleWriteInput = event =>{
             {suggestion[0] === "do something nice for someone else"? 
             <div className='others'>
                 <div  className='others__flex'>
-                    <img className='others__img'src={others2} alt='giving gift to someone else'/> 
-                    <img className='others__img'src={others} alt='giving gift to someone else'/>      
-                    <img className='others__img'src={others3} alt='giving gift to someone else'/> 
+                    <img className='others__1'src={others2} alt='a boy sharing his cookies with a girl'/> 
+                    <img className='others__2'src={others} alt='someone giving a gift to someone else who is thankful'/>      
+                    <img className='others__3'src={others3} alt='a boy carrying groceries for an elderly lady'/> 
                 </div>
-                <a href='https://bucketlistjourney.net/random-acts-of-kindness-ideas-and-examples/'><button>More Ideas</button></a>
+                <a className='a' href='https://bucketlistjourney.net/random-acts-of-kindness-ideas-and-examples/'><button className='button'>More Ideas</button></a>
             </div>
             : ""}
             {suggestion[0] === "write down your thoughts"? 
@@ -170,8 +188,8 @@ const handleWriteInput = event =>{
                 </audio>
             </div> 
             : ""}
-            {suggestion[0] === "Ponder why and enjoy. Congrats!! "? 
-            <img className='enjoy'src={enjoy} alt='cascade of flowers'/>
+            {suggestion[0] === "Ponder why and enjoy"? 
+                <img className='enjoy'src={enjoy} alt='cascade of flowers falling down'/>
             : ""}
             </div>
         </div>
