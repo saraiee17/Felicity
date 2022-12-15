@@ -2,7 +2,7 @@ import './Calendar.scss';
 import axios from 'axios';
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Calendar, dateFnsLocalizer} from 'react-big-calendar'
+import { Calendar, dateFnsLocalizer,Views} from 'react-big-calendar'
 import 'react-big-calendar/lib/css/react-big-calendar.css';
 import "react-datepicker/dist/react-datepicker.css";
 import format from "date-fns/format";
@@ -73,20 +73,21 @@ const emotionCount = graphData.reduce((counts, emotion) => {
     // Return the updated counts object
     return counts;
   }, {});
-
-
+  
     return(
         <div className='calendar'>
             <h2 className='calendar__title'>Welcome {user.first_name}</h2>
 
          {  graphData.length>0?  <Calendar className='calendar__calendar'localizer={localizer}
                 events={calendarData}
+                views={[Views.MONTH, Views.AGENDA]}
+                toolbarClassName="my-toolbar-class"
                 startAccessor="start"
                 endAccessor="end"
                 style={{ height: 300, width:450}} />: <span>Loading</span>}
 
-        <div className='user__graph'>
-        <Plot className='user__graph1'
+        <div className='calendar__graph'>
+        <Plot className='calendar__graph1'
         data={[  
           {type: 'bar', x: Object.keys(emotionCount), y: Object.values(emotionCount)}
         ]}
@@ -99,7 +100,12 @@ const emotionCount = graphData.reduce((counts, emotion) => {
             type: 'pie'
           }]}
           layout={ {height: 220,
-            width: 320}}/>
+            width: 320, margin: {
+              l: 0,
+              r: 0,
+              b: 0,
+              t: 0
+            },}}/>
         <Plot className='calendar__graph3'
       data={[
         {

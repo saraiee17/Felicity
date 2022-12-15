@@ -13,9 +13,9 @@
         justify-content:  center;
         background-color: white;
         color: colors.$primary;
-        border-radius: 8px;
-        padding: 32px 24px;
-        margin-bottom: 16px;
+        border-radius: .5rem;
+        padding: 2rem 1.5rem;
+        margin-bottom: 1rem;
     }
 }
 
@@ -32,7 +32,18 @@
 
 
 .book{
-    max-height: 100px;
+    max-height: 8rem;
+    margin: 1rem;
+    @include mixins.tablet{
+        max-height: 10rem;
+    }
+    @include mixins.desktop{
+        max-height: 15rem;
+    }
+    &flex{
+        display: flex;
+        justify-content: space-between;
+    }
 }
 .book:hover{
     color: colors.$primary;
@@ -43,7 +54,7 @@
     flex-direction: column;
     align-items: center;
     &__video{
-        border-radius: 8px;
+        border-radius: .5rem;
     }
 }
 
@@ -52,10 +63,10 @@
     flex-direction: column;
     align-items: center;
     &__sheep{
-        max-width: 100px;
+        max-width: 6.25rem;
         position: absolute;
-        top: 448px;
-        left:32px;
+        top: 28rem;
+        left:2rem;
         animation: arc 10s;
         animation-timing-function: linear;
         animation-iteration-count: infinite;
@@ -83,12 +94,22 @@
    display: flex;
     }
    &__phone{
-    max-width: 170px;
+    max-width: 10.625rem;
    }
    &__buttonflex{
     display: flex;
    }
+   &__desktop{
+    display: none;
+    @include mixins.desktop{
+        display: block;
+    }
+   }
 }
+.phone{
+    max-width: 10.625rem;
+}
+
 
 .friend{
     display: flex;
@@ -133,10 +154,10 @@
         flex-direction: row;
     }
     &__video1{
-        max-height: 150px;
+        max-height: 9.375rem;
         @include mixins.tablet{
-            max-height: 180px;
-            width: 180px;
+            max-height: 11.25rem;
+            width: 11.25rem;
         }
         @include mixins.desktop{
             max-height: 11.25rem;
@@ -149,7 +170,7 @@
             max-height: 18.75rem;
         }
         @include mixins.desktop{
-            margin-right: 64px;
+            margin-right: 4rem;
         }
     }
 }
@@ -191,17 +212,17 @@
     &__title{
         background-color: colors.$primary;
         min-width: 12.5rem;
-        min-height: 200px;
+        min-height: 12.5rem;
         color: white;
         max-width: 70vw;
         overflow-wrap: break-word;
     }
     &__input{
-        border-radius: 20px;
-        border: 1px solid grey;
-        height: 36px;
-        padding: 0 16px;
-        margin-top: 16px;
+        border-radius: .08rem;
+        border: .0625rem solid grey;
+        height: 2.25rem;
+        padding: 0 1rem;
+        margin-top: 1rem;
         width: 100%;
         color:transparent;
     }

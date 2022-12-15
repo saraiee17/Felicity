@@ -12,8 +12,8 @@
     height: 90vh;
     &__container{
     background-image: url('../../assets/background.png');
-    height: 500px;
-    width: 500px;
+    height: 31.25rem;
+    width: 31.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -26,7 +26,7 @@
         animation-timing-function: linear;
     }
 &__cog{
-    max-width: 60px;
+    max-width: 3.75rem;
     position: absolute;
     top: 16rem;
     z-index: 100;
@@ -36,70 +36,70 @@
         &1{
         color: colors.$tertiary;
         background-color: white;
-        width:300px;
-        height: 200px;
+        width:18.75rem;
+        height: 12.5rem;
         clip-path: polygon(100% 0,50% 100%, 0 0);
         transform: translate(70%)rotate(-90deg);
         text-align: center;
         }
         &1:focus{
-            border-top: 6px solid colors.$primary;
+            border-top: .375rem solid colors.$primary;
             color:colors.$secondary;
             font-weight: 600;
         }
         &2{
             color: colors.$tertiary;
             background-color: white;
-            width:300px;
-            height: 200px;
+            width:18.75rem;
+            height: 12.5rem;
             clip-path: polygon(100% 0,50% 100%, 0 0);
             transform: translate(60%,-55%)rotate(-20deg);
             text-align: center;
         }
         &2:focus{
-            border-top: 6px solid colors.$primary;
+            border-top: .375rem solid colors.$primary;
             color:colors.$secondary;
             font-weight: 600;
         }
         &3{
             color: colors.$tertiary;
             background-color: white;
-            width:300px;
-            height: 200px;
+            width:18.75rem;
+            height: 12.5rem;
             clip-path: polygon(100% 0,50% 100%, 0 0);
             transform: translate(70%,-50%)rotate(30deg);
             text-align: center;
         }
         &3:focus{
-            border-top: 6px solid colors.$primary;
+            border-top: .375rem solid colors.$primary;
             color:colors.$secondary;
             font-weight: 600;
         }
         &4{
             color:colors.$tertiary;
             background-color: white;
-            width:300px;
-            height: 200px;
+            width:18.75rem;
+            height: 12.5rem;
             clip-path: polygon(100% 0,50% 100%, 0 0);
             transform: translate(30%)rotate(90deg);
             text-align: center;
         }
         &4:focus{
-            border-top: 6px solid colors.$primary;
+            border-top: .375rem solid colors.$primary;
             color:colors.$secondary;
             font-weight: 600;
         }
         &5{
             color: colors.$tertiary;
             background-color: white;
-            width:300px;
-            height: 200px;
+            width:18.75rem;
+            height: 12.5rem;
             clip-path: polygon(100% 0,50% 100%, 0 0);
             transform: translate(-200%,60%)rotate(-180deg);
             text-align: center;
         }
         &5:focus{
-            border-top: 6px solid colors.$primary;
+            border-top: .375rem solid colors.$primary;
             color:colors.$secondary;
             font-weight: 600;
         }
@@ -108,5 +108,5 @@
 }
 .return{
     margin-right: 8rem;
-    max-width: 75px;
+    max-width: 4.6875rem;
 }

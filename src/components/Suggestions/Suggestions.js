@@ -91,6 +91,9 @@ const handleWriteInput = event =>{
             <div className='screen'>
                 <div className='screen__flex' >
                     <img className='screen__phone' src={phone} alt='cartoon of women muting her phone'/>
+                    <video className='screen__desktop' width="320" height="240" loop autoPlay>
+                     <source className='screen__desktop' src={laptop}type="video/mp4" />
+                    </video>
                 </div >
                 <div className='screen__buttonflex'>
                     <a className='a book' href='https://apps.apple.com/us/app/freedom-block-distractions/id1269788228?mt=8'><button className='button'>iOS</button></a>
@@ -105,6 +108,7 @@ const handleWriteInput = event =>{
                 <video  width="320" height="240" loop autoPlay>
                      <source  src={laptop}type="video/mp4" />
                 </video>
+                <img className='screen__desktop phone' src={phone} alt='cartoon of women muting her phone'/>
                 </div>
                 <div className='screen__buttonflex'>
                     <a className='a' href='https://apps.apple.com/us/app/freedom-block-distractions/id1269788228?mt=8'><button className='button'>iOS</button></a>
