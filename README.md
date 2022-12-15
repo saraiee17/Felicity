@@ -8,7 +8,7 @@ Felicity means happiness or the ability to find appropriate expressions for oneâ
 
 The current front end project uses uses a subset of data from the backend database included here. (see https://github.com/saraiee17/felicity-api)
 
-###Front end Built With
+## Front end Built With
 -ReactJS
 -SASS
 -AXIOS
@@ -30,10 +30,10 @@ $ npm start
 Runs the app in the development mode. Open http://localhost:3000 to view application in the browser.
 
 
-##Author
+## Author
 -Sarai Escobar
 
-##Acknowledgements
+## Acknowledgements
 -Sincere thanks to my educators and TAs with Brainstation. Without your support, guidance, and kindness this project wouldn't come to fruition. 
 
 #felicity
