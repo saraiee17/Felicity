@@ -34,6 +34,6 @@ Runs the app in the development mode. Open http://localhost:3000 to view applica
 -Sarai Escobar
 
 ## Acknowledgements
--Sincere thanks to my educators and TAs with Brainstation. Without your support, guidance, and kindness this project wouldn't come to fruition. 
+-Sincere thanks to my educators and TAs with Brainstation. Without your support, guidance, and kindness this project wouldn't have come to fruition. 
 
 #felicity
