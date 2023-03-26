@@ -6,7 +6,7 @@ Felicity means happiness or the ability to find appropriate expressions for oneâ
 
 ## Functionality
 
-The current front end project uses uses a subset of data from the backend database included here. (see https://github.com/saraiee17/felicity-api)
+The current front end project uses a subset of data from the backend database included here. (see https://github.com/saraiee17/felicity-api)
 
 ## Front end Built With
 -ReactJS
